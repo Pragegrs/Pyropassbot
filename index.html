@@ -48,18 +48,27 @@
             align-items: center;
         }
 
-        /* Style for the video logo */
-        .video-logo {
-            width: 300px; /* Adjust the width of the video */
-            height: auto;
+        /* Style for the video logo container */
+        .video-logo-container {
+            width: 300px; /* Adjust the width of the container */
+            height: 300px; /* Make it a square */
             border-radius: 50%; /* Make it a circle */
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Style for the video logo */
+        .video-logo {
+            width: 100%; /* Make the video fill the container */
+            height: auto;
         }
     </style>
 </head>
 <body>
-    <div class="video-logo">
-        <video autoplay loop muted>
+    <div class="video-logo-container">
+        <video class="video-logo" autoplay loop muted>
             <source src="your-logo.mp4" type="video/mp4">
         </video>
     </div>
